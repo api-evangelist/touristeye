@@ -1,0 +1,35 @@
+generated: '2026-07-21'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml hosts (dig, curl, whois; domain does not resolve)
+hosts:
+- host: touristeye.com
+  resolves: false
+  https: false
+  tls_version: null
+  hsts: null
+  note: curl exit 6 (could not resolve host); no A record published
+- host: www.touristeye.com
+  resolves: false
+  https: false
+  tls_version: null
+  hsts: null
+domains:
+- domain: touristeye.com
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: false
+  dmarc_policy: null
+  registered: true
+  registrar: GoDaddy Corporate Domains, LLC
+  domain_created: '2009-10-19'
+  domain_expires: '2026-10-19'
+  whois_nameservers:
+  - ns-1353.awsdns-41.org
+  - ns-635.awsdns-15.net
+  - ns-1725.awsdns-23.co.uk
+  note: whois lists AWS Route 53 nameservers and an active registration, but the
+    delegated nameservers return no records for the zone (no A/NS/SOA/MX). The
+    domain is registered but dark — the TouristEye service is defunct (last
+    archive.org snapshot of the live site is from 2016; by 2017 the site was a
+    301 redirect).
